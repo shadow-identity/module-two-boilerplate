@@ -35,7 +35,7 @@ module.exports = {
   devtool: 'inline-source-map',
   debug: debug,
   output: {
-    path: './src/dist',
+    path: './dist',
     filename: '[hash].[name].js'
   },
   devServer: {
@@ -46,7 +46,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'babel'
+        loader: ['babel', 'eslint']
       },
       {
         test: /\.css$/,

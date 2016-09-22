@@ -4,7 +4,7 @@ const GAME = 'wot'
 function makeRequest(url) {
   return fetch(url)
   .then(resp => resp.json())
-  .then(resp => new Promise(function(resolve, reject) {
+  .then(resp => new Promise((resolve, reject) => {
     if (resp.status === 'ok') {
       resolve(resp.data)
     } else if (resp.status === 'error') {
@@ -19,8 +19,8 @@ export function loadUsers(username) {
   return makeRequest(url)
 }
 
-export function loadProfile(account_id) {
-  const url = `${API_PROXY_URL}/${GAME}/account/info/?account_id=${account_id}`
+export function loadProfile(accountId) {
+  const url = `${API_PROXY_URL}/${GAME}/account/info/?account_id=${accountId}`
   return makeRequest(url)
-    .then(data => data[account_id])
+    .then(data => data[accountId])
 }

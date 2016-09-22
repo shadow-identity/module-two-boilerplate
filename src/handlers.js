@@ -2,7 +2,7 @@ import { loadUsers, loadProfile } from './loaders'
 import { renderUserProfile, renderSearchResult } from './views'
 import { toggleSpinner } from './helpers'
 
-export function handleSearchClick(e) {
+export function handleSearchClick() {
   toggleSpinner()
   const usernameInput = document.querySelector('#username')
   const username = usernameInput.value

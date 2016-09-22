@@ -1,16 +1,16 @@
 import { handleUserClick } from './handlers'
 
-export function renderUser({nickname, account_id}) {
+export function renderUser({ nickname, accountId }) {
   return `
-    <div class="search-results_item js-user" data-id="${account_id}">${nickname}</div>
+    <div class="search-results_item js-user" data-id="${accountId}">${nickname}</div>
   `
 }
 
 export function renderSearchResult(accounts) {
   const node = document.querySelector('#search-results')
   node.innerHTML = accounts.map(renderUser).join('')
-  for (let node of document.querySelectorAll('.js-user')) {
-    node.addEventListener('click', handleUserClick)
+  for (const nodeJSUser of document.querySelectorAll('.js-user')) {
+    nodeJSUser.addEventListener('click', handleUserClick)
   }
   // render result to the node with class name `search-results`
   // Note! it's already exist. See index.html for more info.
@@ -19,12 +19,12 @@ export function renderSearchResult(accounts) {
 }
 
 
-export function renderUserProfile({nickname, global_rating, statistics}) {
+export function renderUserProfile({ nickname, globalRating, statistics }) {
   const { wins, battles } = statistics.all
-  const winsPercent = (wins / battles * 100).toFixed(2)
+  const winsPercent = ((wins / battles) * 100).toFixed(2)
 
   document.querySelector('#profile').innerHTML = `
-    <h1>${nickname} <sup>${global_rating}</sup></h1>
+    <h1>${nickname} <sup>${globalRating}</sup></h1>
     <div>
       <p>Battles: ${battles}</p>
       <p>Wins percent: ${winsPercent}%</p>
