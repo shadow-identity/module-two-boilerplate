@@ -1,8 +1,8 @@
 const API_PROXY_URL = 'http://188.166.73.133/wg-api'
 const GAME = 'wot'
 
-function makeRequest(url) {
-  return fetch(url)
+export function makeRequest(url) {
+  return window.fetch(url)
   .then(resp => resp.json())
   .then(resp => new Promise((resolve, reject) => {
     if (resp.status === 'ok') {
