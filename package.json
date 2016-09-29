@@ -1,0 +1,32 @@
+{
+  "name": "module-two-boilerplate",
+  "version": "1.0.0",
+  "description": "It's a boilerplate for future shiny app",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "prestart": "echo npm install",
+    "start": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shadow-identity/module-two-boilerplate.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shadow-identity/module-two-boilerplate/issues"
+  },
+  "homepage": "https://github.com/shadow-identity/module-two-boilerplate#readme",
+  "devDependencies": {
+    "css-loader": "^0.25.0",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.22.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.1"
+  }
+}

@@ -10,6 +10,18 @@ body {
   width: 220px;
 }
 
+.search-results {
+  display: flex;
+}
+
+.search-results_list {
+  flex: 1 0 auto;
+}
+
+.search-results_profile {
+  flex: 2 0 auto;
+}
+
 .spinner {
   width: 64px;
   height: 64px;
